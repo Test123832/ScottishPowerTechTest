@@ -10,6 +10,10 @@ import kotlinx.serialization.Serializable
 @Parcelize
 @Serializable
 data class Comment(
+    @SerialName(value = "id")
+    val id: Int,
+    @SerialName(value = "postId")
+    val postId: Int,
     @SerialName(value = "name")
     val name: String,
     @SerialName(value = "email")
