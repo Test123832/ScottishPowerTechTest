@@ -11,6 +11,7 @@ coroutines = "1.9.0"
 junit = "4.13.2"
 robolectric = "4.13"
 androidxTest = "1.6.1"
+hilt = "2.54"
 
 [libraries]
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidxRoom" }
@@ -20,6 +21,9 @@ androidx-arch-core-testing = { module = "androidx.arch.core:core-testing", versi
 androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "androidxComposeMaterial3" }
 androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTest" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
 
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }

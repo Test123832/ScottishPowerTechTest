@@ -61,6 +61,12 @@ dependencies {
     // json parsing
     implementation(libs.kotlinx.serialization.json)
 
+    // di
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    androidTestImplementation(libs.hilt.testing)
+    kspAndroidTest(libs.hilt.compiler)
+
     // unit test
     testImplementation(libs.junit)
     testImplementation(libs.androidx.test.core)
