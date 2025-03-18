@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 android {
@@ -66,6 +68,14 @@ dependencies {
     ksp(libs.hilt.compiler)
     androidTestImplementation(libs.hilt.testing)
     kspAndroidTest(libs.hilt.compiler)
+
+    // network
+    implementation(libs.sandwich)
+    implementation(platform(libs.retrofit.bom))
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.bundles.retrofitBundle)
+    testImplementation(libs.okhttp.mockwebserver)
+    testImplementation(libs.androidx.arch.core.testing)
 
     // unit test
     testImplementation(libs.junit)
