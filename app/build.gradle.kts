@@ -1,9 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.hilt.plugin)
 }
 
 android {
@@ -49,6 +50,8 @@ dependencies {
     api(libs.androidx.compose.material3)
     implementation(libs.androidx.core)
 
+    // kotlinx
+    api(libs.kotlinx.immutable.collection)
 
     // coroutines
     implementation(libs.kotlinx.coroutines.android)
@@ -68,6 +71,7 @@ dependencies {
     ksp(libs.hilt.compiler)
     androidTestImplementation(libs.hilt.testing)
     kspAndroidTest(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // network
     implementation(libs.sandwich)

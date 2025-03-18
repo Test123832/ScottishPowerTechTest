@@ -30,6 +30,5 @@ class DetailsRepositoryImpl @Inject constructor(
         flow {
             val comment = commentDao.getComment(id).asDomain()
             emit(comment)
-
         }.onCompletion { onComplete() }.flowOn(ioDispatcher)
 }
