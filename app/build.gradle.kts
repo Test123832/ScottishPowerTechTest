@@ -58,6 +58,7 @@ dependencies {
 
     // coroutines
     implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.junit.ktx)
     testImplementation(libs.kotlinx.coroutines.test)
 
     // database
@@ -89,4 +90,8 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.androidx.test.core)
     testImplementation(libs.robolectric)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.turbine)
+
 }
