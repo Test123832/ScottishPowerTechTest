@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -43,6 +44,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
     }
 }
 
@@ -52,6 +54,7 @@ dependencies {
 
     // kotlinx
     api(libs.kotlinx.immutable.collection)
+    implementation(libs.androidx.ui.tooling.preview.android)
 
     // coroutines
     implementation(libs.kotlinx.coroutines.android)
@@ -60,6 +63,7 @@ dependencies {
     // database
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    debugImplementation(libs.androidx.ui.tooling)
     ksp(libs.androidx.room.compiler)
     testImplementation(libs.androidx.arch.core.testing)
 

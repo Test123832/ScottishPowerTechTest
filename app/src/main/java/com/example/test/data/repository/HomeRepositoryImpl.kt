@@ -36,7 +36,7 @@ class HomeRepositoryImpl @Inject constructor(
             //fetches a list of [Comment] from the network and getting [ApiResponse] asynchronously.
             val response = appClient.fetchCommentList()
             response.suspendOnSuccess {
-                comments = data.results
+                comments = data
                 commentDao.insertComments(comments.asEntity())
                 emit(commentDao.getAllCommentsList().asDomain())
             }.onFailure { // handles the all error cases from the API request fails.

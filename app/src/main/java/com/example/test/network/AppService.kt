@@ -1,11 +1,12 @@
 package com.example.test.network
 
+import com.example.test.data.Comment
 import com.skydoves.sandwich.ApiResponse
 import retrofit2.http.GET
 
 interface AppService {
 
-    @GET("comment")
+    @GET("comments")
     suspend fun fetchCommentList(
-    ): ApiResponse<CommentResponse>
+    ): ApiResponse<List<Comment>>
 }

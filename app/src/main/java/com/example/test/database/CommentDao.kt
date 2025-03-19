@@ -14,7 +14,7 @@ interface CommentDao {
     @Query("SELECT * FROM CommentEntity WHERE id = :id")
     suspend fun getComment(id: Int): CommentEntity
 
-    @Query("SELECT * FROM CommentEntity")
+    @Query("SELECT * FROM CommentEntity ORDER BY name")
     suspend fun getAllCommentsList(): List<CommentEntity>
 
     @Query("DELETE FROM CommentEntity")

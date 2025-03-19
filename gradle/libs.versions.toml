@@ -6,6 +6,7 @@ androidxCore = "1.15.0"
 androidxRoom = "2.6.1"
 androidxArchCore = "2.2.0"
 androidxComposeMaterial3 = "1.3.1"
+androidxCompose = "1.7.8"
 kotlinxSerializationJson = "1.7.3"
 coroutines = "1.9.0"
 junit = "4.13.2"
@@ -17,6 +18,8 @@ okHttp = "4.12.0"
 sandwich = "2.0.10"
 androidxHiltNavigationCompose = "1.2.0"
 kotlinxImmutable = "0.3.7"
+uiToolingPreviewAndroid = "1.7.8"
+uiTooling = "1.7.8"
 
 [libraries]
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidxRoom" }
@@ -40,6 +43,7 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 kotlinx-immutable-collection = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxImmutable" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "androidxCompose" }
 
 # unit test
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -47,6 +51,8 @@ robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectr
 
 
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -55,6 +61,7 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 [bundles]
 retrofitBundle = ["retrofit", "retrofit-kotlinx-serialization", "okhttp-logging-interceptor"]
