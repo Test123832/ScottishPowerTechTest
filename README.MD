@@ -1,7 +1,7 @@
 
 # ScottishPower Android Tech Test
 
-Tech test by Giacomo De Bacco
+Tech test for Scottish Power
 The aim of this exercise was to build an Android application with two screens using Kotlin and Compose. MVVM was the preferred choice for the architecture.
 
 Built using *Android Studio Meerkat | 2024.3.*
