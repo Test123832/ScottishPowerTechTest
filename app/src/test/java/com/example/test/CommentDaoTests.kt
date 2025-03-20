@@ -43,6 +43,12 @@ class CommentDaoTest: LocalDatabase() {
     }
 
     @Test
+    fun testGetCommentNotExists() = runBlocking {
+        val retrievedComment = commentDao.getComment(1)
+        assertEquals(null, retrievedComment)
+    }
+
+    @Test
     fun testGetAllCommentsList() = runBlocking {
         val comments = listOf(
             CommentEntity(id = 1, postId = 10, name = "Comment 1", email = "comment1@example.com", body = "Body 1"),

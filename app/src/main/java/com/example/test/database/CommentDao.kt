@@ -12,7 +12,7 @@ interface CommentDao {
     suspend fun insertComments(commentList: List<CommentEntity>)
 
     @Query("SELECT * FROM CommentEntity WHERE id = :id")
-    suspend fun getComment(id: Int): CommentEntity
+    suspend fun getComment(id: Int): CommentEntity?
 
     @Query("SELECT * FROM CommentEntity ORDER BY name")
     suspend fun getAllCommentsList(): List<CommentEntity>
